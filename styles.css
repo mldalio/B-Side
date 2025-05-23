@@ -1,0 +1,546 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Sora", sans-serif;
+  color: #fafafa;
+}
+
+body {
+  background: linear-gradient(180deg, #1a1a1a, #0c0c0c);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  background-color: #1a1a1a;
+  width: 100%;
+  padding: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: #2b2b2b 1px solid;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  text-decoration: none;
+}
+
+.navbar ul li a {
+  list-style: none;
+  padding: 16px;
+  text-decoration: none;
+  position: relative;
+}
+
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 0%;
+  height: 2px;
+  background-color: #a4161a;
+}
+
+.navbar ul li a:hover::after {
+  width: 100%;
+}
+
+.navbar ul li a:hover {
+  font-weight: 600;
+}
+
+.social-media {
+  display: flex;
+  gap: 16px;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #a4161a;
+  color: #fafafa;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: #811414;
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.hero {
+  background-image: url(./assets/fondo-hero-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  margin: 92px auto 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content .btn {
+  align-self: center;
+  margin-top: 16px;
+}
+
+.btn {
+  background-color: #a4161a;
+  color: #fafafa;
+  padding: 16px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #811414;
+}
+
+.btn-secondary {
+  background-color: #2b2b2b;
+  color: #fafafa;
+  padding: 16px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.btn-secondary:hover {
+  background-color: #1a1a1a;
+}
+
+.categorias {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+
+.categorias-wrapper {
+  max-width: 1440px;
+  margin: 48px auto;
+  padding: 0 16px;
+}
+
+.categorias-wrapper h2 {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.categoria {
+  position: relative;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categoria h3 {
+  position: relative;
+  z-index: 2;
+}
+
+.categoria .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 1),
+    rgba(190, 8, 8, 0.5)
+  );
+  z-index: 1;
+}
+
+.rock {
+  background-image: url(./assets/rock.jpeg);
+}
+
+.pop {
+  background-image: url(./assets/pop.jpg);
+}
+
+.metal {
+  background-image: url(./assets/metal.jpg);
+}
+
+.jazz {
+  background-image: url(./assets/jazz.webp);
+}
+
+.destacados-wrapper {
+  max-width: 1440px;
+  margin: 48px auto 60px;
+  padding: 0 16px;
+}
+
+.destacados-wrapper h2 {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: flex-start;
+  background-color: #1b1a1a;
+  padding: 16px;
+  border: #2b2b2b 1px solid;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.detalle-producto {
+  max-width: 1440px;
+  margin: 92px auto 0;
+  padding: 48px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.detalle-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.detalle-imagen img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.detalle-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detalle-info .btn {
+  align-self: flex-start;
+}
+
+.detalle-info ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.precio {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.btn {
+  padding: 12px 24px;
+  background-color: #a4161a;
+  color: #fafafa;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.detalle-caracteristicas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.detalle-caracteristicas h2 {
+  margin-bottom: 16px;
+}
+
+.detalle-musica {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  background-color: #1b1a1a;
+  padding: 32px;
+  border-radius: 8px;
+  border: #2b2b2b 1px solid;
+}
+
+.detalle-musica h2 {
+  margin-bottom: 16px;
+}
+
+.detalle-musica ol {
+  padding-left: 0;
+}
+
+.detalle-spotify iframe {
+  width: 100%;
+  height: 380px;
+  border-radius: 8px;
+}
+
+.detalle-canciones {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+}
+
+.detalle-canciones ul,
+.detalle-canciones ol {
+  padding-left: 20px;
+}
+
+.detalle-valoraciones {
+  text-align: center;
+}
+
+.detalle-valoraciones .rating {
+  font-size: 2rem;
+  margin: 16px 0;
+}
+
+.review p {
+  margin-bottom: 16px;
+}
+
+.hero-contacto {
+  background-image: url(./assets/fondo-hero-2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  margin: 92px auto 0;
+}
+
+.formulario-contacto {
+  max-width: 900px;
+  margin: 64px auto;
+  padding: 32px;  
+  border-radius: 8px;
+  border: #2b2b2b 1px solid;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formulario-contacto h2 {  
+  text-align: center;
+}
+
+.formulario-contacto p {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campo label {
+  font-weight: 600;  
+}
+
+.campo input, .campo textarea {
+  padding: 16px;
+  border-radius: 4px;
+  border: #2b2b2b 1px solid;
+  background-color: #1a1a1a;
+  color: #fafafa;
+  margin-bottom: 16px;
+}
+
+.campo input:focus, .campo textarea:focus {
+  outline: none;
+  border-color: #a4161a;
+}
+
+.formulario-contacto .btn {
+  align-self: center;
+  padding: 12px 24px;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+.footer {
+  background-color: #1a1a1a;
+  padding: 32px 16px;
+}
+
+.footer-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-wrapper a {
+  color: #a4161a;
+  text-decoration: none;
+}
+
+.footer-wrapper a:hover {
+  color: #811414;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar {
+    position: static;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar ul li {
+    margin: 8px 0;
+  }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .categorias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    padding: 8px;
+  }
+
+  .detalle-musica {
+    grid-template-columns: 1fr;
+  }
+
+  .detalle-caracteristicas {
+    grid-template-columns: 1fr;
+  }
+
+  .detalle-header {
+    grid-template-columns: 1fr;
+  }
+
+  .detalle-header img {
+    width: 100%;
+    height: auto;
+  }
+
+  .detalle-info {
+    gap: 8px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  .detalle-canciones,
+  .detalle-info,
+  .review p {
+    text-align: center;
+  }
+
+  .detalle-info {
+    align-items: center;
+    gap: 16px;
+  }
+
+  .detalle-canciones ol,
+  .detalle-canciones ul {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  .detalle-info .btn {
+    align-self: center;
+  }
+
+  .footer-wrapper {
+    text-align: center;
+  }
+}
